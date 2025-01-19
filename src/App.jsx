@@ -4,6 +4,8 @@ import Hero from "./components/Hero";
 import Contact from "./components/Contact";
 import BlogCard from "./components/BlogCard";
 import Modal from "./modal/BlogModal";
+import blogs from "./blog";
+
 
 
 import { useState } from "react";
@@ -13,7 +15,7 @@ function App() {
   const [selectedBlog, setSelectedBlog] = useState(null);
 
   const handleOpenModal = () => {
-    setSelectedBlog(blog);
+    setSelectedBlog(blogs.id);
     setIsModalOpen(true);
   };
 

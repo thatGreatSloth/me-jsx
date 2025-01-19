@@ -23,8 +23,8 @@ const Header = () => {
           <nav>
             <ul className="flex gap-10 justify-center mt-5">
               <li className="nav-item">Home</li>
-              <li className="nav-item">My Stories</li>
-              <li className="nav-item">Catch Me Here</li>
+              <li className="nav-item">Sloth's Blogs</li>
+              <li className="nav-item">Find the Sloth Where?</li>
             </ul>
           </nav>
           <div className="wave-container">

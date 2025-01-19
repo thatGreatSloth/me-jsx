@@ -1,10 +1,11 @@
-import  blogs  from "../blog/index.js";
+import blogs from "../blog/index.js";
 
-const BlogCard = () => {
+const BlogCard = (props) => {
+  const { handleOpenModal } = props;
   return (
     <div>
       <div>
-        <h1 className="text-center text-white text-3xl">
+        <h1 className="text-center text-white text-3xl ">
           The Sloth's Perspective of all things Life
         </h1>
         <div className="wave-container">
@@ -19,12 +20,20 @@ const BlogCard = () => {
         </div>
       </div>
       <div className="container mx-auto py-10 px-4 ">
-        <div className="flex flex-wrap justify-center gap-6 " >
+        <div className="flex flex-wrap justify-center gap-6 ">
           {blogs.map((blog) => (
-            <div key={blog.id}  className="w-64 border border-black  rounded-lg p-4 shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-200 mt-10 mr-3 "
-              onClick={() => handleOpenModal(blog)}>
-              <h2 className="text-2xl font-semibold text-gray-800 mb-2">{blog.title}</h2>
-              <p className="text-white text-xl mt-2">{blog.excerpt}</p>
+            <div
+              key={blog.id}
+              className="w-64 border border-black  rounded-lg p-4 shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-200 mt-10 mr-3 "
+              onClick={() => {
+                handleOpenModal(blog); // Open the modal with selected blog
+                console.log(blog); // Log the blog object to the console
+              }}
+            >
+              <h2 className="text-3xl font-semibold text-gray-800 mb-2 p-10">
+                {blog.title}
+              </h2>
+              <p className="text-white text-2xl mt-2 p-10">{blog.excerpt}</p>
             </div>
           ))}
         </div>

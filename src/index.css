@@ -3,13 +3,14 @@
 @tailwind utilities;
 
 body {
-  background: linear-gradient(90deg, #da3a7a 10%, #105bc2 90%);
+  background: linear-gradient(90deg, #4eabb5 10%, rgba(30, 41, 133, 0.96) 90%);
   background-size: cover;
   font-family: "Luxurious Roman", serif;
+
 }
 
 .nav-item {
-  @apply text-white text-lg font-normal relative cursor-pointer;
+  @apply text-white text-3xl font-normal relative cursor-pointer;
 }
 .nav-item:hover {
   @apply text-black;
@@ -46,8 +47,8 @@ header {
   overflow: hidden;              /* Hide the overflowing text */
   border-right: 2px solid rgb(23, 96, 160); /* Create the cursor effect */
   white-space: nowrap;           /* Prevent text wrapping */
-  width: 20h;                   /* Set the width to the number of characters */
-  animation: typewriter 2s steps(100) 1s infinite normal both, blinkCursor 500ms steps(14) infinite normal;
+  width: 29ch;                   /* Set the width to the number of characters */
+  animation: typewriter 2s steps(29) 1s normal both, blinkCursor 500ms steps(12) 1s infinite;
 }
 
 @keyframes typewriter {
@@ -55,21 +56,20 @@ header {
     width: 0;
   }
   100% {
-    width: 33ch;
+    width: 29ch;
+   /* Hide the cursor at the end of the typing animation */
   }
 }
 
 @keyframes blinkCursor {
-  0% {
-    border-color: transparent;
+  0%, 100% {
+    border-color: transparent; /* Initially hidden cursor */
   }
   50% {
-    border-color: rgb(20, 143, 170);
-  }
-  100% {
-    border-color: transparent;
+    border-color: rgb(20, 143, 170); /* Cursor visible while typing */
   }
 }
+
 
 .modal-container {
   position: fixed;
