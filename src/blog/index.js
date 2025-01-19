@@ -24,6 +24,23 @@ const blogs = [
     author: 'Ava Williams',
     date: '2025-01-10',
   },
+  {
+    id: 4,
+    title: 'The Art of Letting Go',
+    excerpt: 'Exploring the power of releasing control and embracing uncertainty in life.',
+    content: 'Letting go is not about giving up, but about freeing yourself from the weight of unnecessary attachments. Life is full of unpredictable twists, and by letting go of the need for control, we open ourselves to new possibilities and experiences. The art of letting go allows us to embrace the flow of life, to trust in the process, and to find peace in uncertainty. Whether it’s a job, a relationship, or an expectation, the act of releasing can be liberating and transformative, leading to greater inner peace and freedom.',
+    author: 'Sophia Williams',
+    date: '2025-01-10'
+  },
+  {
+    id: 5,
+    title: 'Embracing Solitude',
+    excerpt: 'Why spending time alone is essential for personal growth and self-discovery.',
+    content: 'In a world that constantly demands our attention, solitude can be a rare and precious gift. Spending time alone allows us to reconnect with ourselves, reflect on our goals, and explore our inner thoughts. It is in solitude that we can discover our true selves, without the distractions and pressures of the outside world. Embracing solitude is not about isolation; it’s about creating space for personal growth, introspection, and creativity. Through solitude, we can cultivate a deeper understanding of who we are and what we truly want in life.',
+    author: 'Emily Brown',
+    date: '2025-01-15'
+  }
+  
 ];
 
 export default blogs;

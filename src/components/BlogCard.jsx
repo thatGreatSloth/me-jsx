@@ -1,7 +1,24 @@
 import blogs from "../blog/index.js";
+import { useState } from "react";
+import Modal from "../modal/BlogModal.jsx";
 
 const BlogCard = (props) => {
-  const { handleOpenModal } = props;
+
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedBlog, setSelectedBlog] = useState(null);
+
+  const handleOpenModal = (blogs) => {
+    setSelectedBlog(blogs);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedBlog(null);
+    setIsModalOpen(false);
+  };
+
+
   return (
     <div>
       <div>
@@ -34,10 +51,27 @@ const BlogCard = (props) => {
                 {blog.title}
               </h2>
               <p className="text-white text-2xl mt-2 p-10">{blog.excerpt}</p>
+
+            
             </div>
           ))}
         </div>
       </div>
+      {isModalOpen && selectedBlog && (
+        <Modal handleCloseModal={handleCloseModal}>
+          <div className="w-[800px]  ">
+            <h2 className="text-3xl py-2">{selectedBlog.title}</h2>
+            <p className="text-2xl py-2">{selectedBlog.content}</p>
+            <p>
+              <strong>Author:</strong> {selectedBlog.author}
+            </p>
+            <p>
+              <strong>Date:</strong> {selectedBlog.date}
+            </p>
+          </div>
+        </Modal>
+      )}
+      
     </div>
   );
 };
