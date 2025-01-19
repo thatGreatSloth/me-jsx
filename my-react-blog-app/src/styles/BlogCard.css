@@ -1,0 +1,23 @@
+.blog-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  transition: transform 0.2s;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.blog-card:hover {
+  transform: scale(1.05);
+}
+
+.blog-card h3 {
+  font-size: 1.5em;
+  margin: 0 0 8px;
+}
+
+.blog-card p {
+  font-size: 1em;
+  color: #555;
+}
